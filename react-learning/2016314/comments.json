@@ -1,0 +1,12 @@
+[
+    {
+        "text": "Hey there!",
+        "id": 0,
+        "author": "Stephen"
+    },
+    {
+        "text": "React is *great*!",
+        "id": 1,
+        "author": "Zindex"
+    }
+]

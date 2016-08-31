@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navigation Menu</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.js"></script>
+	<style type="text/css" media="screen">
+		nav{
+			display:inline-block;
+			margin:60px auto 45px;
+			background-color:#5597b4;
+			box-shadow:0 1px 1px #ccc;
+			border-radius:2px
+		}
+		nav a {
+			display: inline-block;
+			line-height: 50px;
+			text-decoration: none;
+			padding: 0 20px;
+			text-transform: uppercase;
+			font-size: 18px;
+			color: #fff;
+			transition: background-color 0.5s ease;
+		}
+		nav.home .home,
+		nav.about .about,
+		nav.archives .archives,
+		nav.rss .rss{
+			background-color:#e35885
+		}
+		p{
+			border-radius: 2px;
+			padding:10px 5px;
+			font-size: 20px;
+			background-color: #c4d7e0;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<nav v-bind:class="active" v-on:click.prevent>
+			<a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+			<a href="#" class="about" v-on:click="makeActive('about')">About</a>
+			<a href="#" class="archives" v-on:click="makeActive('archives')">archives</a>
+			<a href="#" class="rss" v-on:click="makeActive('rss')">Rss</a>
+		</nav>
+		<br>
+		<p> {{ active }}</p>
+	</div>
+	<script>
+		var vm = new Vue({
+			el: '#main',
+			data: {
+				active: 'home'
+			},
+			methods: {
+				makeActive: function(item){
+					this.active=item
+				}
+			}
+		})
+	</script>
+</body>
+</html>

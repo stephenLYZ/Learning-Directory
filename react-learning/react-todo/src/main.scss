@@ -1,0 +1,68 @@
+
+
+.container{
+    width: 760px;
+    margin: 20px auto;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+}
+
+.box-panel{
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+
+    .panel-header{
+        input{
+            width: 90%;
+            padding: 5px 5px;
+            padding-left: 50px;
+            font-size: 24px;
+            border: none;
+            outline: 0;
+        }
+
+        border-bottom: 3px solid #ddd;
+    }
+}
+
+.todo-list{
+    list-style: none;
+    padding: 0;
+    li{
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        font-size: 18px;
+
+        input[type=checkbox]{
+            margin-right: 10px;
+        }
+
+        button{
+            font-size: 14px;
+        }
+    }
+}
+
+.todo-footer{
+    margin-left: 10px;
+
+    input[type=checkbox]{
+        margin-right: 10px;
+    }
+    button{
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    }
+}

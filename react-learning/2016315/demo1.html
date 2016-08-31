@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<script src="react.js"></script>
+    <script src="JSXTransformer.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/jsx">
+		//--数组遍历--
+		var arr = ['Javascript','Python',"Ruby"];
+		React.render(
+			<ul>{
+			arr.filter(function(v){
+				return typeof v === 'string'
+			}).map(function(v){
+				return <li>{v}</li>
+			})
+			}</ul>,
+		document.getElementById('example')
+		);
+	</script>
+</body>
+</html>

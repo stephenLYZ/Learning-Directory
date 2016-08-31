@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo3-props</title>
+	<script src="react.js"></script>
+    <script src="JSXTransformer.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/jsx">
+		var Component1 = React.createClass({
+			render: function(){
+				return (
+					<p>{this.props.content,this.props.name}</p>
+					);
+			}
+
+		});
+
+		var Component2 = React.createClass({
+			handleClick: function(e){
+				console.log(this.props.content,e.target);
+			},
+			render: function(){
+				return (
+					<div className="List" onClick={this.handleClick}>
+						<Component1 content="Hello " name="stephen" />
+						<Component1 content="Hello " name="React" />
+					</div>
+				);
+
+			}
+
+		});
+
+		React.render(
+			<Component2 content="点我点我快点我" />,
+			document.getElementById('example')
+		);
+
+	</script>
+</body>
+</html>

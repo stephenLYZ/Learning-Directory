@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>state</title>
+	<script src="react.js"></script>
+    <script src="JSXTransformer.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/jsx">
+		//利用getInitialState()来初始化state的值(每次渲染只执行一次)，使用this.setState()来修改状态
+		var Component = React.createClass({
+			getInitialState: function(){
+				return {
+					isClick: 'false'
+				};
+			},
+			clickHandle: function(){
+				this.setState({
+					isClick: !this.state.isClick
+				});
+			},
+
+			render: function(){
+				var text = this.state.isClick ? 'Clicked' : 'unClick';
+				return (
+					<div>
+						<input type="checkbox" onChange={this.clickHandle} />{ text }
+					</div>
+
+				);
+			}
+		});
+
+		React.render(
+			<Component />,
+			document.getElementById('example')
+		);
+	</script>
+</body>
+</html>

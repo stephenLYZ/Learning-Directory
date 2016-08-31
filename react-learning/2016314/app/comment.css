@@ -1,0 +1,31 @@
+body {
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 30px;
+}
+.commentBox{
+	text-align: center;
+}
+.comment span{
+	border:solid 2px black;
+	display: inline-block;
+	width: 60%;
+	height: 50px;
+	background-color: rgba(255,255,255,0.3);
+}
+.commentForm input{
+	display: block;
+	width: 40%;
+	height: 20px;
+	margin: 10px auto;
+	padding:5px;
+	border:1px solid black;
+}
+.commentForm .btn{
+	width: 40px;
+	height: 40px;
+	border-radius: 50% 50%;
+}

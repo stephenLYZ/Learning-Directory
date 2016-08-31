@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo2</title>
+	<script src="react.js"></script>
+    <script src="JSXTransformer.js"></script>
+</head>
+<body>
+	<div class="example"></div>
+	<script type="text/jsx">
+		//JSX中利用通过React.createClass()来创建component
+		//组件的名称必须以大写字母开头，通过标签形式引用
+		var name = 'stephen';
+		var Demo = React.createClass({
+		//每个组件都有一个自己的render方法
+			render: function(){
+				return (
+					<p className="name">Hello,{name}</p>
+				);
+			}
+		});
+		//组件嵌套
+		var DemoWrap = React.createClass({
+			render: function(){
+				return <ul>{
+					[1,2,3].map(function(v){						
+					//注意：在JSX中style必须写成这种形式，以预防XSS
+						return <li style={{fontSize: '20px'}}>{v}.<Demo/>
+								</li>
+					})
+				}</ul>
+
+			}
+
+		});
+		React.render(
+			<DemoWrap />,
+			document.querySelector('.example')
+		);
+	</script>
+</body>
+</html>

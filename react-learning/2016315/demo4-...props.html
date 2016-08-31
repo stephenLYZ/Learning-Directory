@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>...props</title>
+	<script src="react.js"></script>
+    <script src="JSXTransformer.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/jsx">
+		//利用...props将父组件的所有属性全部传递给子组件
+		var CheckLink = React.createClass({
+			render: function(){
+				return <a {...this.props}>{this.props.children}</a>
+			}
+		});
+
+		var LinkParent = React.createClass({			
+			render: function(){
+				var arr = ['click me 1','click me 2'];
+				return (
+					<div>
+						<CheckLink href="demo1.html" name="demo1" >{arr[0]}</CheckLink>
+						<br/>
+						<CheckLink href="demo2-multiple.html" name="demo2" > {arr[1]}</CheckLink>
+					</div>
+				);
+			}
+
+		});
+
+		React.render(
+			<LinkParent />,
+			document.getElementById('example')
+		);
+	</script>
+
+</body>
+</html>
