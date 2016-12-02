@@ -1,5 +1,0 @@
-/Users/stephenliu/Desktop/Learning-Directory/Csharp/Demo/Demo/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/stephenliu/Desktop/Learning-Directory/Csharp/Demo/Demo/bin/Debug/Demo.exe.mdb
-/Users/stephenliu/Desktop/Learning-Directory/Csharp/Demo/Demo/bin/Debug/Demo.exe
-/Users/stephenliu/Desktop/Learning-Directory/Csharp/Demo/Demo/obj/x86/Debug/Demo.exe
-/Users/stephenliu/Desktop/Learning-Directory/Csharp/Demo/Demo/obj/x86/Debug/Demo.exe.mdb
