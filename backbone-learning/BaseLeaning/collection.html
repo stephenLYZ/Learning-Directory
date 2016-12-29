@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>collection</title>
+</head>
+<body>
+	<script src="http://7xl0rs.com1.z0.glb.clouddn.com/backbone/jquery.min.js"></script>
+	<script src="http://7xl0rs.com1.z0.glb.clouddn.com/backbone/underscore-min.js"></script>
+	<script src="http://7xl0rs.com1.z0.glb.clouddn.com/backbone/backbone-min.js"></script>
+	<script src="http://7xl0rs.com1.z0.glb.clouddn.com/backbone/backbone.localStorage-min.js"></script>
+	<script>
+	(function($){
+		var Book = Backbone.Model.extend({
+			defaults : {
+				title: 'default'
+			},
+			initialize : function(){
+				// alert('Hey!Hello World!')
+			}
+		})
+
+		var BookShelf = Backbone.Collection.extend({
+			model : Book 
+		})
+
+		var book1 = new Book({ title: 'book1' })
+		var book2 = new Book({ title: 'book2' })
+		var book3 = new Book({ title: 'book3' })
+
+		var bookShelf = new BookShelf([book1,book2,book3])
+
+		bookShelf.url = "/books/"
+		bookShelf.fetch({
+			success: function(collection,response,options){
+				collection.each(function(book){
+					alert(book.get('title'))
+				})
+			},
+			error: function(colleciton,response,options){
+				alert('error')
+			}
+		})
+
+		var newBooks = Backbone.Collection.extend({
+			model: Book,
+			url: "/books/"
+		})
+
+		var books = new newBooks()
+		var oneBook = books.create({
+			title: "i'm coming"
+		})
+	})(jQuery)
+	</script>
+</body>
+</html>
