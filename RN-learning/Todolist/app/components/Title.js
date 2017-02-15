@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 40,
     paddingBottom: 10,
-    backgroundColor: 'skyblue',
+    backgroundColor: 'gray',
   },
   title: {
     color: 'white',
@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
 })
 
 export default class Title extends Component {
+
+  constructor(props) {
+    super(props)
+  }
 
   render() {
     return (

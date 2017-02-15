@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React, { Component, PropTypes } from 'react'
+import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const styles = StyleSheet.create({
   footer: {
@@ -13,12 +13,19 @@ const styles = StyleSheet.create({
 })
 
 export default class Footer extends Component {
+  static propTypes = {
+    onRemoveCompleted: PropTypes.func
+  }
+
+  constructor(props) {
+    super(props)
+  }
 
   render() {
     return (
-      <View style={styles.footer}>
+      <TouchableOpacity style={styles.footer} onPress={this.props.onRemoveCompleted.bind(this)}>
         <Text style={styles.text}>Remove completed items</Text>
-      </View>
+      </TouchableOpacity>
     )
   }
 }

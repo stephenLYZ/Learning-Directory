@@ -50,8 +50,8 @@ export default class Input extends Component {
         placeholder={placeholder}
         style={styles.input}
         value={text}
-        onChangeText={this.onChangeText}
-        onSubmitEditing={this.onSubmitEditing}
+        onChangeText={this.onChangeText.bind(this)}
+        onSubmitEditing={this.onSubmitEditing.bind(this)}
       />
     )
   }
