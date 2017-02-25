@@ -1,10 +1,12 @@
 import RedditClient from '../api/RedditClient'
 
 const types = {
-  // set your types here
+  FETCH_POSTS_PENDING: 'FETCH_POSTS_PENDING',
+  FETCH_POSTS_SUCCESS: 'FETCH_POSTS_SUCCESS',
+  FETCH_POSTS_FAILURE: 'FETCH_POSTS_FAILURE'
 }
 
-// implement actionCreators
+const startFetchPosts = () =>
 export const actionCreators = {
 }
 

@@ -1,5 +1,4 @@
 export default class RedditClient {
-  // this is so you don't have to read Reddits API documentation
   constructor(token) {
     this.baseUrl = 'https://oauth.reddit.com/'
     this.defaultHeaders = {
@@ -7,6 +6,10 @@ export default class RedditClient {
     }
   }
 
-  // use "fetch" to retrieve data from endpoints on the above baseUrl and add the defaultHeaders to your request
-
+  getPosts(endpoints) {
+    const url = this.baseUrl + endpoints
+    return fetch(url, {
+      headers: this.defaultHeaders
+    }).then((res) => res.json())
+  }
 }
