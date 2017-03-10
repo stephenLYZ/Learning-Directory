@@ -15,7 +15,7 @@ export default class LocationButtonGroup extends Component {
 
   renderItem = (location, i) => {
     const { icon, title } = location
-    const onPressLocations = this.props
+    const { onPressLocations } = this.props
 
     return (
       <View
