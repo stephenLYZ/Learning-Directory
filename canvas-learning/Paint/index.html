@@ -3,8 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Paint</title>
+	<style type="text/css">
+		html {
+		  box-sizing: border-box;
+		  background: whitesmoke;
+		  font-family: sans-serif;
+		}
+		canvas {
+		  background: white;
+		}
+
+		#app {
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 500px;
+		}
+	</style>
 </head>
 <body>
-	<script src="./index.js"></script>
+	<div id="app"></div>
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script type="text/babel" src="./index.js"></script>
+	<script type="text/babel">
+		let painter = new Painter({
+		  container: '#app',
+		  width: 500,
+		  height: 300
+		})
+		painter.init()
+	</script>
 </body>
 </html>
