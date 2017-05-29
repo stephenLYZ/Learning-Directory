@@ -20,7 +20,8 @@ class Painter {
       line: this.line.bind(this),
       erase: this.erase.bind(this),
       text: this.text.bind(this),
-      spray: this.spray.bind(this)
+      spray: this.spray.bind(this),
+      rectangles: this.rectangles.bind(this)
     }
   }
 
