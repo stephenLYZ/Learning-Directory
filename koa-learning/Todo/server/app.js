@@ -19,7 +19,7 @@ app.on('error', (err, ctx) =>
   log.error('server error', err, ctx)
 )
 
-app.listen(8999,() => {
+app.listen(8999, () => {
   console.log('Koa is listening in 8999')
 })
 
