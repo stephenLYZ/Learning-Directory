@@ -4,7 +4,7 @@
   	  <span class="title">
   	  	登录
   	  </span>
-  	  <el-cow>
+  	  <el-row>
   	  	<el-input
   	  	  v-model="account"
   	  	  placeholder="账号"
@@ -16,7 +16,7 @@
 		  type="password">
 		 </el-input>
 		 <el-button type="primary">登录</el-button>
-  	  </el-cow>
+  	  </el-row>
   	</el-col>
   </el-row>
 </template>
